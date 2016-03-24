@@ -13,5 +13,29 @@
     </style>
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"  />
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    文／Randy_孤独患者（简书作者）
+    原文链接：http://www.jianshu.com/p/5591cfc01a15
+    著作权归作者所有，转载请联系作者获得授权，并标注“简书作者”。
 
+    <style name="MyTabLayoutStyle" parent="Widget.Design.TabLayout">
+        <!--tab的最大的宽度-->
+        <item name="tabMaxWidth">@dimen/design_tab_max_width</item>
+        <!--tab指示标的颜色-->
+        <item name="tabIndicatorColor">#69f</item>
+        <!--tab 指示标的高度-->
+        <item name="tabIndicatorHeight">2dp</item>
+        <!--tab字体的样式-->
+        <item name="tabTextAppearance">@style/MyTabTextStyle</item>
+        <!--tab 选中时的颜色-->
+        <item name="tabSelectedTextColor">#ffffff</item>
+    </style>
+
+    <style name="MyTabTextStyle" parent="TextAppearance.Design.Tab">
+        <!--Tab字体的大小-->
+        <item name="android:textSize">@dimen/design_tab_text_size</item>
+        <!--Tab字体的默认的颜色-->
+        <item name="android:textColor">#bdbdbd</item>
+        <!--Tab字体是否为大写-->
+        <item name="textAllCaps">false</item>
+    </style>
 </resources>

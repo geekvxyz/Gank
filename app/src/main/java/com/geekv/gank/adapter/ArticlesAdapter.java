@@ -20,6 +20,17 @@ public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.MyView
     Context context;
     LayoutInflater inflater;
     List<Article.Results>list;
+    private OnItemClickLitener listener;
+    public interface OnItemClickLitener
+    {
+        void onClick(View view, int position);
+
+        void onLongClick(View view, int position);
+    }
+    public  void setOnItemClickLitener(OnItemClickLitener listener)
+    {
+        this.listener =listener;
+    }
     public ArticlesAdapter(Context context,List<Article.Results>list){
         this.context=context;
         this.list=list;
@@ -32,11 +43,34 @@ public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.MyView
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
+    public void onBindViewHolder(final MyViewHolder holder, final int position) {
         Article.Results result=list.get(position);
         holder.tvTitle.setText(result.getDesc());
         holder.tvWho.setText(result.getWho());
         holder.tvTime.setText(result.getPublishedAt().split("T")[0]);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(listener != null) {
+                    listener.onClick(holder.itemView, position);
+                }
+            }
+        });
+
+        holder.itemView.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+
+                if (listener != null) {
+                    listener.onLongClick(holder.itemView, position);
+                }
+                return false;
+            }
+        });
+    }
+    public void addAll(List<Article.Results>lists){
+        this.list.addAll(lists);
+        notifyDataSetChanged();
     }
 
     @Override

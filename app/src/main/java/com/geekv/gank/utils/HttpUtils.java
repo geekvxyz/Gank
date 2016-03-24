@@ -34,8 +34,8 @@ public class HttpUtils {
 	 * 获取安卓相关文章
 	 * @param listener
 	 */
-	public static void getAndroidArticles(Listener<String> listener) {
-		String url= Constant.ART_LIST_URL_STRING2+Constant.ANDROID+"/20/1";
+	public static void getAndroidArticles(int page,Listener<String> listener) {
+		String url= Constant.ART_LIST_URL_STRING2+Constant.ANDROID+"/20/"+page;
 		StringRequest request = new StringRequest(url, listener,null);
 		MyApp.getQueue().add(request);
 	}
@@ -44,8 +44,8 @@ public class HttpUtils {
 	 * 获取福利
 	 * @param listener
 	 */
-	public static void getFULIArticles(Listener<String> listener) {
-		String url= Constant.ART_LIST_URL_STRING2+Constant.FULI+"/20/1";
+	public static void getFULIArticles(int page,Listener<String> listener) {
+		String url= Constant.ART_LIST_URL_STRING2+Constant.FULI+"/20/"+page;
 		StringRequest request = new StringRequest(url, listener,null);
 		MyApp.getQueue().add(request);
 	}
@@ -54,23 +54,18 @@ public class HttpUtils {
 	 * 获取Ios相关文章
 	 * @param listener
 	 */
-	public static void getiosArticles(Listener<String> listener) {
+	public static void getiosArticles(int page,Listener<String> listener) {
 		String url= Constant.ART_LIST_URL_STRING2+Constant.IOS+"/20/1";
 		StringRequest request = new StringRequest(url, listener,null);
 		MyApp.getQueue().add(request);
 	}
 
-	public static void getKZArticles(Listener<String> listener) {
-		String url= Constant.ART_LIST_URL_STRING2+Constant.KUOZHAN+"/20/1";
-		StringRequest request = new StringRequest(url, listener,null);
-		MyApp.getQueue().add(request);
-	}
 
 	/**
 	 * 获取前端相关文章
 	 * @param listener
 	 */
-	public static void getqdArticles(Listener<String> listener) {
+	public static void getqdArticles(int page,Listener<String> listener) {
 		String url= Constant.ART_LIST_URL_STRING2+Constant.QIANDUAN+"/20/1";
 		StringRequest request = new StringRequest(url, listener,null);
 		MyApp.getQueue().add(request);
@@ -80,12 +75,12 @@ public class HttpUtils {
 	 * 获得所有文章
 	 * @param listener
 	 */
-	public static void getallArticles(Listener<String> listener) {
+	public static void getallArticles(int page,Listener<String> listener) {
 		String url= Constant.ART_LIST_URL_STRING2+Constant.ALL+"/20/1";
 		StringRequest request = new StringRequest(url, listener,null);
 		MyApp.getQueue().add(request);
 	}
-	public static void getVDArticles(Listener<String> listener) {
+	public static void getVDArticles(int page,Listener<String> listener) {
 		String url= Constant.ART_LIST_URL_STRING2+Constant.VIDEO+"/20/1";
 		StringRequest request = new StringRequest(url, listener,null);
 		MyApp.getQueue().add(request);

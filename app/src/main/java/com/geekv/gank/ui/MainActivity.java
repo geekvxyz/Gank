@@ -29,6 +29,7 @@ import com.geekv.gank.fragment.AndroidFragment;
 import com.geekv.gank.fragment.FuliFragment;
 import com.geekv.gank.fragment.IosFragment;
 import com.geekv.gank.fragment.JSFragment;
+import com.geekv.gank.fragment.VideoFragment;
 import com.geekv.gank.utils.HttpUtils;
 import com.google.gson.Gson;
 
@@ -50,9 +51,7 @@ public class MainActivity extends AppCompatActivity
         vp= (ViewPager) findViewById(R.id.vp);
         vp.setAdapter(fragmentAdapter);
         tablayout= (TabLayout) findViewById(R.id.tablayout);
-
-
-        String[]list_title=new String[]{"Android","iOS","福利","前端"};
+        String[]list_title=new String[]{"Android","iOS","福利","前端","休息视频"};
         //设置TabLayout的模式
         tablayout.setTabMode(TabLayout.MODE_FIXED);
         //为TabLayout添加tab名称
@@ -60,6 +59,7 @@ public class MainActivity extends AppCompatActivity
         tablayout.addTab(tablayout.newTab().setText(list_title[1]));
         tablayout.addTab(tablayout.newTab().setText(list_title[2]));
         tablayout.addTab(tablayout.newTab().setText(list_title[3]));
+        tablayout.addTab(tablayout.newTab().setText(list_title[4]));
 
         vp.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tablayout));
 
@@ -140,13 +140,8 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camara) {
+        if (id == R.id.nav_data) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
 
@@ -165,6 +160,7 @@ public class MainActivity extends AppCompatActivity
         fragments.add(new IosFragment());
         fragments.add(new FuliFragment());
         fragments.add(new JSFragment());
+        fragments.add(new VideoFragment());
         return fragments;
     }
 }

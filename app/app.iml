@@ -100,6 +100,7 @@
     <orderEntry type="library" exported="" name="volley" level="project" />
     <orderEntry type="library" exported="" name="universal-image-loader-1.9.2_sources" level="project" />
     <orderEntry type="library" exported="" name="cardview-v7-23.1.0" level="project" />
+    <orderEntry type="library" exported="" name="picasso-2.5.1" level="project" />
     <orderEntry type="library" exported="" name="appcompat-v7-23.1.1" level="project" />
     <orderEntry type="library" exported="" name="design-23.1.1" level="project" />
     <orderEntry type="library" exported="" name="recyclerview-v7-24.0.0-alpha1" level="project" />

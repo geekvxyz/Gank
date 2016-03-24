@@ -5,14 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:theme="@style/AppTheme.AppBarOverlay"
-        android:fitsSystemWindows="true">
+        >
 
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
@@ -21,6 +20,7 @@
             app:layout_scrollFlags="scroll|enterAlways"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            android:fitsSystemWindows="true"
             android:background="?attr/colorPrimary"
 
              />
@@ -30,7 +30,8 @@
             android:layout_height="wrap_content"
             app:tabGravity="fill"
             app:tabIndicatorColor="#ffffffff"
-            android:fillViewport="false" />
+            android:fillViewport="false"
+            style="@style/MyTabLayoutStyle"/>
     </android.support.design.widget.AppBarLayout>
 
     <android.support.v4.view.ViewPager

@@ -4,16 +4,17 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:padding="10dp"
     android:weightSum="1">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="这是一个文章的标题！！"
-        android:layout_marginRight="20dp"
+        android:layout_marginLeft="10dp"
         android:textStyle="bold"
+        android:layout_marginTop="10dp"
         android:id="@+id/tv_title"
+        android:textColor="#202020"
         android:singleLine="true"/>
     <TextView
         android:layout_width="wrap_content"
@@ -21,27 +22,31 @@
         android:text="这是作者！！"
         android:textSize="13sp"
         android:id="@+id/tv_who"
+        android:textColor="#323232"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="2016-03-14"
         android:id="@+id/tv_time"
+        android:textColor="#323232"
         android:layout_alignBottom="@+id/tv_who"
         android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
         android:layout_alignParentEnd="true" />
 
     <ImageView
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:id="@+id/i"
-        android:background="@drawable/hfl"
-        android:layout_alignTop="@+id/tv_title"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#E0E0E0"
+            android:id="@+id/imageView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
 
 
 </RelativeLayout>
