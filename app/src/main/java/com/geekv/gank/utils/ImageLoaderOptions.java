@@ -45,8 +45,8 @@ public class ImageLoaderOptions {
 	}
 	public static DisplayImageOptions getChatAdapterOptions(){
 		return new DisplayImageOptions.Builder()
-		.showImageForEmptyUri(R.drawable.hfl)
-		.showImageOnFail(R.drawable.hfl)
+		.showImageForEmptyUri(R.drawable.zhanwei)
+		.showImageOnFail(R.drawable.zhanwei)
 		.resetViewBeforeLoading(true)
 		.cacheOnDisc(true)
 		.cacheInMemory(true)

@@ -1,33 +1,27 @@
 package com.geekv.gank.adapter;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.View.OnLongClickListener;
 import android.view.ViewGroup;
-import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.geekv.gank.R;
-import com.geekv.gank.bean.Article;
 import com.geekv.gank.bean.Meizi;
 import com.geekv.gank.utils.ImageLoaderOptions;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.display.FadeInBitmapDisplayer;
-import com.nostra13.universalimageloader.core.listener.PauseOnScrollListener;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
+
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 
 public class FuliAdapter extends
         RecyclerView.Adapter<FuliAdapter.MyViewHolder>
@@ -59,7 +53,7 @@ public class FuliAdapter extends
         //options = ImageLoaderOptions.getChatAdapterOptions();
         ImageLoader.getInstance().init(ImageLoaderConfiguration.createDefault(context));
         mDatas = datas;
-        mDisplayImageOptions =ImageLoaderOptions.getOptions();
+        mDisplayImageOptions =ImageLoaderOptions.getChatAdapterOptions();
 
         mImageLoadingListenerImpl=new ImageLoadingListenerImpl();
 

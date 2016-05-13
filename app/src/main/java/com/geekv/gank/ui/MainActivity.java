@@ -1,18 +1,12 @@
 package com.geekv.gank.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.View;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -20,18 +14,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.android.volley.Response;
 import com.geekv.gank.R;
-import com.geekv.gank.adapter.ArticlesAdapter;
 import com.geekv.gank.adapter.MyFragmentAdapter;
-import com.geekv.gank.bean.Article;
 import com.geekv.gank.fragment.AndroidFragment;
 import com.geekv.gank.fragment.FuliFragment;
 import com.geekv.gank.fragment.IosFragment;
 import com.geekv.gank.fragment.JSFragment;
 import com.geekv.gank.fragment.VideoFragment;
-import com.geekv.gank.utils.HttpUtils;
-import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -129,6 +118,8 @@ public class MainActivity extends AppCompatActivity
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }else if (id == R.id.action_exit){
+            finish();
         }
 
         return super.onOptionsItemSelected(item);
@@ -143,10 +134,12 @@ public class MainActivity extends AppCompatActivity
         if (id == R.id.nav_data) {
             // Handle the camera action
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_setting) {
 
-        } else if (id == R.id.nav_send) {
-
+        } else if (id == R.id.nav_about) {
+            startActivity(new Intent(this,AboutActivity.class));
+        }else if(id==R.id.nav_exit) {
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
